@@ -27,10 +27,12 @@ def show_row(row, topk=5):
 
 def main():
     repo_root = Path(__file__).resolve().parent.parent
-    in_dir = repo_root / "artifacts" / "retrieval_results"
+    # in_dir = repo_root / "artifacts" / "retrieval_results"
+    in_dir = repo_root / "artifacts" / "retrieval_results_finetuned_updated"
 
-    model_name = "convnext_base"
-    split = "train"
+    # model_name = "convnext_base"
+    model_name = "convnext_base_supcon_p256"
+    split = "test"
 
     results_path = in_dir / f"results_{model_name}_{split}_K10.parquet"
     failures_path = in_dir / f"failures_{model_name}_{split}_top5.parquet"
@@ -53,12 +55,12 @@ def main():
     # for i in range(min(5, len(failures))):
     #     show_row(failures.iloc[i], topk=5)
 
-    print("\nShowing 5 successes...")
-    for _, row in success.sample(n=min(5, len(success))).iterrows():
-        show_row(row, topk=5)
-
     print("\nShowing 5 failures...")
     for _, row in failures.sample(n=min(5, len(failures))).iterrows():
+        show_row(row, topk=5)
+        
+    print("\nShowing 5 successes...")
+    for _, row in success.sample(n=min(5, len(success))).iterrows():
         show_row(row, topk=5)
 
 if __name__ == "__main__":

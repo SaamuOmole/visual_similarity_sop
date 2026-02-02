@@ -1,3 +1,26 @@
-__pycache__/
+# Virtual environments
 .venv/
+
+# Artifacts / generated outputs
 artifacts/
+
+# Datasets (not tracked)
+data/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# macOS
+.DS_Store
+
+# VSCode / editors
+.vscode/
+.idea/
+
+# Logs / temporary files
+*.log
+*.tmp
+*.swp

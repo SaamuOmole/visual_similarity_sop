@@ -329,6 +329,12 @@ poetry install
 poetry shell
 ```
 
+Alternatively, install dependencies via:
+
+```
+pip install -r requirements.txt
+```
+
 ### Train the metric learning model
 
 ```

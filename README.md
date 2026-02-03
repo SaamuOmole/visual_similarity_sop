@@ -34,7 +34,11 @@ I used the [Stanford Online Products (SOP) dataset](https://service.tib.eu/ldmse
 
 The focus in this project is the `class_id`. Each product instance (`class_id`) has multiple images taken from different viewpoints and conditions. Many instances have only 2 images, making the task challenging. Below is the plot of the number of images per `class_id`.
 
-![Number of images per class_id](/Users/samuel.omole/Desktop/repos/visual_similarity_sop/plots/images_per_class_id.png)
+<p align="center">
+  <img src="./plots/images_per_class_id.png" alt="Number of images per class id" width="">
+  <br>
+  <em>Number of images per class id</em>
+</p>
 
 Dataset reference:
 
